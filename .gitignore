@@ -4,6 +4,14 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### MTA ###
+/.mta/
+/mta/
+/*.mtar
+/mta*.jar
+mta_archives/
+Makefile*.mta
+
 ### STS ###
 .apt_generated
 .classpath
