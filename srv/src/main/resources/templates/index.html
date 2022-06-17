@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Complimaker</title>
+    <link rel="stylesheet" type="text/css" th:href="@{../styles/style.css}">
+</head>
+<body>
+<div class="content">
+    <img width="500"  src="images/page1Middle.jpg" alt="Dance">
+    <form th:object="${name}" th:action="@{/}" method="post">
+        <div class="page-div">
+            <label for="name" class="text">What is your name?</label>
+            <input type="text" style="height:42px" id="name" th:field="*{myName}" name="name">
+        </div>
+        <div class="page-div">
+            <input width="500" type="image" src="images/page1button.jpg" alt="Give Me Compliment">
+        </div>
+    </form>
+</div>
+</body>
+</html>

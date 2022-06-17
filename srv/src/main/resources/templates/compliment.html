@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Compliments</title>
+    <link rel="stylesheet" type="text/css" th:href="@{../styles/style.css}">
+</head>
+<body>
+<div class="content">
+    <div class="left-content">
+        <div class="page-div">
+            <div class="right-compliment-div">
+                <p class="text" th:text="${name.myName}"></p>
+            </div>
+        </div>
+        <br>
+        <div class="buttons">
+            <form th:action="@{/complimenter}">
+                <div class="button-div-left">
+                    <input type="image" src="images/page2buttonNext.jpg" alt="Next Compliment">
+                </div>
+            </form>
+            <form th:action="@{/enough}">
+                <div class="button-div-right">
+                    <input type="image" class="enough" src="images/page2enough.jpg" alt="Enough">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="right-content">
+        <img width="450" th:src="@{${'images/page2dynamicMiddle/'+ number.num  + '.jpg'}}" alt="Dynamic picture">
+    </div>
+</div>
+</body>
+</html>
