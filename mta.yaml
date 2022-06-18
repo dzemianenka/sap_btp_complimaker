@@ -8,6 +8,8 @@ modules:                    # Mandatory
   - name: complimaker-srv   # Mandatory
     type: java              # Mandatory e.g. java, nodejs, hdb
     path: srv               # Mandatory path to sources
+    deployed-after:         # Deployment order
+      - complimaker-db-deployer
     properties:
       JBP_CONFIG_SAP_MACHINE_JRE: "{ jre: { version: 11.+ } }"                       # Prop for using java 11. For java 8 not necessary
       JBP_CONFIG_COMPONENTS: "jres: [com.sap.xs.java.buildpack.jdk.SAPMachineJDK]"   # Prop for using java 11. For java 8 not necessary
@@ -20,3 +22,22 @@ modules:                    # Mandatory
       commands:
         - mvn clean package
       build-result: "target/*.jar"
+
+  # ------------------ DATABASE MODULE ---------------------
+  - name: complimaker-db-deployer
+    type: hdb
+    path: db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: complimaker-db-hdi-container
+
+resources:
+  # ------------------- HDI CONTAINER ----------------------
+  - name: complimaker-db-hdi-container
+    type: com.sap.xs.hdi-container
+    properties:
+      hdi-container-name: "${service-name}"
+    parameters:
+      service: hana
+      service-plan: hdi-shared
