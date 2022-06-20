@@ -36,7 +36,8 @@ public class ComplimentController {
     @GetMapping("/complimenter")
     public String complimentPage(Model model) {
         Name name = new Name();
-        name.setMyName(this.name.getMyName() + complimentGen.getPhrase());
+        String userName = this.name.getMyName();
+        name.setMyName((userName.isEmpty() ? "Пользователь" : userName) + complimentGen.getPhrase());
 
         Number number = new Number();
         number.setNum(complimentGen.getNumber());
