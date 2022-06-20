@@ -21,22 +21,23 @@ body {
 .buttons {
     position: relative;
     float: inside;
-    padding: 50px;
+    padding: 75px;
 }
 .content {
     position: relative;
-    width: 90%;
+    width: 100%;
+    margin: 0;
     padding: 25px;
     text-align: center;
     align-items: center;
 }
 .left-content {
     float: left;
-    width: 75%;
+    width: 70%;
 }
 .right-content {
     float: left;
-    width: 25%;
+    width: 30%;
 }
 .right-compliment-div {
     height: 150px;
