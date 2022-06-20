@@ -34,6 +34,6 @@ public class ComplimentGen {
     }
 
     public int getNumber() {
-        return RANDOM.nextInt(40) + 1;
+        return RANDOM.nextInt(46) + 1;
     }
 }
