@@ -22,6 +22,8 @@ modules:                    # Mandatory
       commands:
         - mvn clean package
       build-result: "target/*.jar"
+    requires:
+      - name: complimaker-db-hdi-container
 
   # ------------------ DATABASE MODULE ---------------------
   - name: complimaker-db-deployer
