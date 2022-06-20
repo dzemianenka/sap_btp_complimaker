@@ -38,7 +38,6 @@ public class ComplimentController {
     public String complimentPage(Model model) {
         Name name = new Name();
         String userName = this.name.getMyName();
-        System.out.println(this.name.getMyName());
         Gender gender = this.name.getGender();
         name.setMyName((userName.isEmpty() ? "Пользователь" : userName) + complimentGen.getPhrase(gender));
 
