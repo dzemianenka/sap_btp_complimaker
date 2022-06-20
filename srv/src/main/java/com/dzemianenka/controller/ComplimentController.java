@@ -1,6 +1,7 @@
 package com.dzemianenka.controller;
 
 import com.dzemianenka.genarator.ComplimentGen;
+import com.dzemianenka.model.Gender;
 import com.dzemianenka.model.Name;
 import com.dzemianenka.model.Number;
 import org.springframework.stereotype.Controller;
@@ -37,7 +38,9 @@ public class ComplimentController {
     public String complimentPage(Model model) {
         Name name = new Name();
         String userName = this.name.getMyName();
-        name.setMyName((userName.isEmpty() ? "Пользователь" : userName) + complimentGen.getPhrase());
+        System.out.println(this.name.getMyName());
+        Gender gender = this.name.getGender();
+        name.setMyName((userName.isEmpty() ? "Пользователь" : userName) + complimentGen.getPhrase(gender));
 
         Number number = new Number();
         number.setNum(complimentGen.getNumber());

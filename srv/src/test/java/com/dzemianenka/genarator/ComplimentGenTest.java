@@ -9,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.dzemianenka.model.Compliment;
+import com.dzemianenka.model.Gender;
 import com.dzemianenka.repository.ComplimentRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,7 +29,7 @@ public class ComplimentGenTest {
     void getPhrase() {
         when(complimentRepository.findAll()).thenReturn(List.of(new Compliment()));
 
-        String phrase = complimentGen.getPhrase();
+        String phrase = complimentGen.getPhrase(Gender.MALE);
         verify(complimentRepository, times(1)).findAll();
         assertFalse(phrase.isEmpty());
     }
