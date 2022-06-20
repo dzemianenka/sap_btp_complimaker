@@ -34,7 +34,7 @@ modules:                    # Mandatory
     requires:
       - name: complimaker-db-hdi-container
 
-resources:
+resources:                   # Mandatory
   # ------------------- HDI CONTAINER ----------------------
   - name: complimaker-db-hdi-container
     type: com.sap.xs.hdi-container
