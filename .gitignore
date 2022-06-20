@@ -43,3 +43,5 @@ build/
 ### NODE ###
 **/node/
 **/node_modules/
+
+default-env.json
