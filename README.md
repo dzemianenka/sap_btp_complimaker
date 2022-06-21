@@ -1,10 +1,10 @@
 # sap_btp_complimaker
 
-### **PREREQUISITES**
+## Prerequisites
 ___
 Ensure that you have setup a development environment as described [here](.docs/prerequisites.md)
 
-### **BUILD THE APPLICATION**
+## Build the application
 ___
 * Clone the project
 * Navigate to root of the project (folder with mta.yaml file)
@@ -12,13 +12,13 @@ ___
 `mbt build`
 The result should appear in *mta_archives* folder
 
-### **PREPARE BTP ACCOUNT**
+## Setup BTP account
 ___
 * Create the trial account [BTP trial](https://cockpit.hanatrial.ondemand.com/trial)
 * Navigate to space and go to SAP HANA CLOUD
 * Create the database instance
 
-### **DEPLOY THE APPLICATION**
+## Deploy to Cloud Foundry
 ___
 * Login to the space using
 `cf login`
@@ -26,7 +26,7 @@ ___
 * Insert email and password
 * Execute `cf deploy mta_archives/complimaker-application_1.0.0.mtar`
 
-### **CHECK THE APPLICATION**
+## Check the application
 ___
 * Login to the Applications
 * Select *complimaker_srv*
