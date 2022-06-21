@@ -27,4 +27,4 @@ Ensure that you have setup a development environment as described [here](.docs/p
 * Go to the `Applications` in left navigation bar
 * Select *complimaker_srv*
 * Follow the lonk in the top section
-* ![image](.docs/images/DEPLOYED_APPLICATION.png)
+![image](.docs/images/DEPLOYED_APPLICATION.png)
