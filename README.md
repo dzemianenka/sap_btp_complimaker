@@ -25,6 +25,6 @@ Ensure that you have setup a development environment as described [here](.docs/p
 
 ## Check the application
 * Go to the `Applications` in left navigation bar
-* Select *complimaker_srv*
+* Select *complimaker_approuter*
 * Follow the lonk in the top section
 ![image](.docs/images/DEPLOYED_APPLICATION.png)
