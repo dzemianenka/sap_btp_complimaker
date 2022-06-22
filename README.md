@@ -26,5 +26,14 @@ Ensure that you have setup a development environment as described [here](.docs/p
 ## Check the application
 * Go to the `Applications` in left navigation bar
 * Select *complimaker_approuter*
-* Follow the lonk in the top section
+* Follow the link in the top section
 ![image](.docs/images/DEPLOYED_APPLICATION.png)
+
+## Overview
+Application consists of 3 modules and 2 services:
+* The application router is the single point-of-entry for an application running in the Cloud Foundry environment on SAP BTP. The application router is used to serve static content, authenticate users, rewrite URLs, and forward or proxy requests to other micro services while propagating user information.
+* Java module consists of Spring-boot application and Thymeleaf templates. The project is built using maven and results are packaging to .jar archive.
+* DB-deployer application. The SAP HANA Deployment Infrastructure (HDI) provides a service that enables you to deploy database development artifacts to so-called containers. Works once and stops after deployment.
+* SAP HANA Cloud allows you to consume the SAP HANA database from applications running on SAP BPT.
+* SAP HANA db-container stores the data of the desired schema.
+![image](.docs/images/ARCHITECTURE.png)
