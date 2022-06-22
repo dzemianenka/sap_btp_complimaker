@@ -1,0 +1,11 @@
+{
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "/",
+      "target": "/",
+      "destination": "complimaker_srv_api",
+      "authenticationType": "none"
+    }
+  ]
+}

@@ -22,6 +22,10 @@ modules:                    # Mandatory
       commands:
         - mvn clean package
       build-result: "target/*.jar"
+    provides:                # provide api to another module
+      - name: complimaker_srv_api
+        properties:
+          url: '${default-url}'
     requires:
       - name: complimaker-db-hdi-container
 
@@ -33,6 +37,22 @@ modules:                    # Mandatory
       buildpack: nodejs_buildpack
     requires:
       - name: complimaker-db-hdi-container
+
+  # ------------------ APPROUTER MODULE --------------------
+  - name: complimaker-approuter
+    type: nodejs
+    path: approuter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+      keep-existing:
+        routes: true
+    requires:
+      - name: complimaker_srv_api
+        group: destinations
+        properties:
+          name: complimaker_srv_api
+          url: ~{url}
 
 resources:                   # Mandatory
   # ------------------- HDI CONTAINER ----------------------
