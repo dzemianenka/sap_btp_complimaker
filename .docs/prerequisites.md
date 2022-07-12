@@ -36,3 +36,7 @@
 * Open a command prompt/terminal and install grunt via
 
 `npm install -g grunt-cli`
+
+*[REQUIRED On Windows]*
+* Install [Chocolatey](https://chocolatey.org/install)
+* Install [GNU make 4.3](https://community.chocolatey.org/packages/make)
